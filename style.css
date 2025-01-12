@@ -16,41 +16,47 @@ header h1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+/* Táblázat stílus */
 table {
     margin: 20px auto;
     border-collapse: collapse;
     width: 45%;
-    background: rgba(255, 240, 255, 0.9); /* Világos magenta árnyalat */
+    background: rgba(0, 0, 0, 0.8); /* Sötét háttér, hogy a zöld színek kiemelkedjenek */
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(128, 0, 128, 0.5); /* Sötét magenta árnyalatú árnyék */
-    opacity: 0.8;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5); /* Zöldes árnyék */
+    opacity: 0.9;
 }
 
+/* Fejléc */
 thead th {
-    background: #d500f9; /* Élénk magenta */
-    color: #fff;
+    background: #00ff00; /* Élénk zöld háttér */
+    color: #000; /* Fekete színű szöveg a jobb láthatóság érdekében */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 1.2rem;
     padding: 15px;
     text-transform: uppercase;
 }
 
+/* Páros sorok */
 tbody tr:nth-child(even) {
-    background: #f8bbd0; /* Halvány rózsaszínes magenta */
+    background: rgba(0, 255, 0, 0.2); /* Halvány zöld háttér */
 }
 
+/* Páratlan sorok */
 tbody tr:nth-child(odd) {
-    background: #f3e5f5; /* Nagyon halvány lila-magenta */
+    background: rgba(0, 255, 0, 0.4); /* Még világosabb zöld */
 }
 
+/* Cellák stílusai */
 td, th {
     padding: 10px;
     text-align: center;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border: 1px solid #ab47bc; /* Közép magenta */
+    border: 1px solid #00cc00; /* Közép zöld árnyalatú szegély */
 }
 
+/* Képek stílusa a táblázatban */
 td img {
     margin-top: 10px;
     width: 100px;
@@ -63,23 +69,22 @@ td img:hover {
     transform: scale(1.1);
 }
 
-
-/* Linkek és interakciók */
+/* Linkek stílusa */
 a {
-    color: #aa00ff; /* Élénk magenta színű link */
+    color: #00ff00; /* Zöld linkek */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #7b1fa2; /* Sötétebb magenta árnyalat */
+    color: #00cc00; /* Sötétebb zöld árnyalat hover esetén */
     text-decoration: underline;
 }
 
 /* Táblázat hover-effektus */
 tbody tr:hover {
-    background: rgba(173, 20, 87, 0.3); /* Átlátszó sötét magenta hover */
+    background: rgba(0, 255, 0, 0.6); /* Átlátszó világos zöld hover */
     cursor: pointer;
 }
 

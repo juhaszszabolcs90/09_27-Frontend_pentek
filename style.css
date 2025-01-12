@@ -1,28 +1,86 @@
-h1 {
+/* Betűtípus és alapstílusok */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://cdn.mos.cms.futurecdn.net/9QTpESGBXa32D29J77VR3d-1200-80.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
     color: aliceblue;
     text-align: center;
+    margin: 20px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 table {
-    margin-left: auto;
-    margin-right: auto;
-}
-th{
-    background-color: blanchedalmond;
-}
-td {
-    background-color: burlywood;
-    border: solid 1px rgb(85, 177, 54);
-    width: 200px;
-    height: 50px;
-    text-align: center; /* Vízszintes középre igazítás */
-    vertical-align: middle; /* Függőleges középre igazítás */
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 45%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-body { 
-    background-image: url('https://cdn.mos.cms.futurecdn.net/9QTpESGBXa32D29J77VR3d-1200-80.jpg');
-    background-size: cover;
+thead th {
+    background: #ff8c00;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    padding: 15px;
 }
+
+tbody tr:nth-child(even) {
+    background: #ffe4b5;
+}
+
+tbody tr:nth-child(odd) {
+    background: #facf8f;
+}
+
+td, th {
+    padding: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ddd;
+}
+
+td img {
+    margin-top: 10px;
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Linkek és interakciók */
+a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Táblázat hover-effektus */
+tbody tr:hover {
+    background: rgba(255, 165, 0, 0.5);
+    cursor: pointer;
+}
+
 
 span {
     text-align: center;

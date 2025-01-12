@@ -24,6 +24,7 @@ table {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(128, 0, 128, 0.5); /* Sötét magenta árnyalatú árnyék */
+    opacity: 0.8;
 }
 
 thead th {
@@ -52,9 +53,9 @@ td, th {
 
 td img {
     margin-top: 10px;
-    width: 120px;
+    width: 100px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
@@ -86,4 +87,44 @@ tbody tr:hover {
 span {
     text-align: center;
     font-size: 30px;
+}
+
+
+/* Fénypontok tartója */
+.background-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* A táblázat mögött marad */
+    pointer-events: none;
+}
+
+/* Fénypont */
+.spark {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Halvány fehér */
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 5s ease-in-out infinite;
+}
+
+/* Animáció a megjelenéshez és eltűnéshez */
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
 }

@@ -51,5 +51,35 @@
         </tbody>
         
     </table>
+
+<!-- Fénypontok tartója -->
+<div class="background-effects"></div>
+</main>
+
+<script>
+    // Fénypontok létrehozása
+    document.addEventListener("DOMContentLoaded", () => {
+        const backgroundEffects = document.querySelector('.background-effects');
+
+        // 50 fénypont generálása
+        for (let i = 0; i < 50; i++) {
+            const spark = document.createElement('div');
+            spark.classList.add('spark');
+
+            // Véletlenszerű pozíció
+            spark.style.left = `${Math.random() * 100}%`;
+            spark.style.top = `${Math.random() * 100}%`;
+            spark.style.animationDelay = `${Math.random() * 5}s`;
+
+            // Animáció végén újrapozicionálás
+            spark.addEventListener('animationiteration', () => {
+                spark.style.left = `${Math.random() * 100}%`;
+                spark.style.top = `${Math.random() * 100}%`;
+            });
+
+            backgroundEffects.appendChild(spark);
+        }
+    });
+</script>
 </body>
 </html>
